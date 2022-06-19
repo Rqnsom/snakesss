@@ -2,7 +2,7 @@
 
 Game made with a [piston](https://github.com/PistonDevelopers/piston) engine.
 
-<a href="url"><img src="https://raw.githubusercontent.com/Rqnsom/snakesss/main/assets/snakesss.gif" align="center" height=auto width=100% border="black"></a>
+<a href="url"><img src="https://raw.githubusercontent.com/Rqnsom/snakesss/main/assets/sneks.gif" align="center" height=auto width=100% border="black"></a>
 
 Note: *It's really hard to capture a fun animation
 when playing solo a two-player game.*

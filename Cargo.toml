@@ -1,11 +1,11 @@
 [package]
 name = "snakesss"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 repository = "https://github.com/Rqnsom/snakesss"
 description = "The classic (2-player) snake game"
 keywords = ["game", "snake", "2-player-game"]
-categories = ["Games", "Game development"]
+categories = ["games", "game-development"]
 license = "MIT"
 readme = "README.md"
 
