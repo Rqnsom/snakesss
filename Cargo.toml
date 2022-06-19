@@ -1,0 +1,18 @@
+[package]
+name = "snakesss"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/Rqnsom/snakesss"
+description = "The classic (2-player) snake game"
+keywords = ["game", "snake", "2-player-game"]
+categories = ["Games", "Game development"]
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+piston = "0.53.0"
+piston2d-graphics = "0.42.0"
+pistoncore-glutin_window = "0.69.0"
+piston2d-opengl_graphics = "0.81.0"
+freetype-rs = "0.29.0"
+rand = "0.8.3"
