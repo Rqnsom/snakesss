@@ -59,6 +59,11 @@ pub struct Snake {
     pub body: LinkedList<Pos>,
     dir: Direction,
     color: Color,
+
+    /// Previous direction must be kept, because keyboard event loop might
+    /// handle multiple 'change direction' events, and all of those must be
+    /// compared with the original previous direction.
+    prev_dir: Direction,
 }
 
 impl Snake {
@@ -74,15 +79,22 @@ impl Snake {
             ),
             dir,
             color,
+            prev_dir: dir,
         }
     }
 
     pub fn set_direcion(&mut self, direction: Direction) {
         self.dir = match direction {
-            Direction::Down if self.dir != Direction::Up => Direction::Down,
-            Direction::Up if self.dir != Direction::Down => Direction::Up,
-            Direction::Left if self.dir != Direction::Right => Direction::Left,
-            Direction::Right if self.dir != Direction::Left => Direction::Right,
+            Direction::Down if self.prev_dir != Direction::Up => {
+                Direction::Down
+            }
+            Direction::Up if self.prev_dir != Direction::Down => Direction::Up,
+            Direction::Left if self.prev_dir != Direction::Right => {
+                Direction::Left
+            }
+            Direction::Right if self.prev_dir != Direction::Left => {
+                Direction::Right
+            }
             _ => self.dir,
         };
     }
@@ -180,6 +192,8 @@ impl Snake {
                 };
             }
         }
+
+        self.prev_dir = self.dir;
     }
 }
 
