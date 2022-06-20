@@ -1,6 +1,6 @@
 [package]
 name = "snakesss"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 repository = "https://github.com/Rqnsom/snakesss"
 description = "The classic (2-player) snake game"
